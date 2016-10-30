@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ggpo/gui/ui/logindialog.ui'
 #
-# Created: Tue Aug 25 22:55:14 2015
+# Created: Sun Oct 30 17:48:52 2016
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -26,7 +26,7 @@ except AttributeError:
 class Ui_DialogLogin(object):
     def setupUi(self, DialogLogin):
         DialogLogin.setObjectName(_fromUtf8("DialogLogin"))
-        DialogLogin.resize(430, 286)
+        DialogLogin.resize(569, 317)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(_fromUtf8(":/assets/icon-128.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         DialogLogin.setWindowIcon(icon)
@@ -58,6 +58,14 @@ class Ui_DialogLogin(object):
         self.uiPasswordLine.setEchoMode(QtGui.QLineEdit.Password)
         self.uiPasswordLine.setObjectName(_fromUtf8("uiPasswordLine"))
         self.formLayout.setWidget(2, QtGui.QFormLayout.FieldRole, self.uiPasswordLine)
+        self.selectServer = QtGui.QComboBox(DialogLogin)
+        self.selectServer.setObjectName(_fromUtf8("selectServer"))
+        self.selectServer.addItem(_fromUtf8(""))
+        self.selectServer.addItem(_fromUtf8(""))
+        self.formLayout.setWidget(4, QtGui.QFormLayout.FieldRole, self.selectServer)
+        self.labelServer = QtGui.QLabel(DialogLogin)
+        self.labelServer.setObjectName(_fromUtf8("labelServer"))
+        self.formLayout.setWidget(4, QtGui.QFormLayout.LabelRole, self.labelServer)
         self.uiSavePasswordChk = QtGui.QCheckBox(DialogLogin)
         self.uiSavePasswordChk.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.uiSavePasswordChk.setChecked(True)
@@ -114,18 +122,18 @@ class Ui_DialogLogin(object):
         self.retranslateUi(DialogLogin)
         QtCore.QMetaObject.connectSlotsByName(DialogLogin)
         DialogLogin.setTabOrder(self.uiUsernameLine, self.uiPasswordLine)
-        DialogLogin.setTabOrder(self.uiPasswordLine, self.uiSavePasswordChk)
-        DialogLogin.setTabOrder(self.uiSavePasswordChk, self.uiLoginBtn)
+        DialogLogin.setTabOrder(self.uiPasswordLine, self.uiLoginBtn)
         DialogLogin.setTabOrder(self.uiLoginBtn, self.uiRegisterLink)
 
     def retranslateUi(self, DialogLogin):
         DialogLogin.setWindowTitle(_translate("DialogLogin", "FightCade", None))
         self.labelUsername.setText(_translate("DialogLogin", "Username", None))
         self.labelPassword.setText(_translate("DialogLogin", "Password", None))
+        self.selectServer.setItemText(0, _translate("DialogLogin", "127.0.0.1", None))
+        self.selectServer.setItemText(1, _translate("DialogLogin", "fightcade.com", None))
+        self.labelServer.setText(_translate("DialogLogin", "Server", None))
         self.uiSavePasswordChk.setText(_translate("DialogLogin", "Save Password", None))
         self.uiRegisterLink.setText(_translate("DialogLogin", "Create Account...", None))
         self.uiLoginBtn.setText(_translate("DialogLogin", "Login", None))
         self.uiNewVersionLink.setText(_translate("DialogLogin", "Download Update...", None))
         self.uiVersionLbl.setText(_translate("DialogLogin", "version", None))
-
-#import ggpo_rc
