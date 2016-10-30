@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ggpo/gui/ui/logindialog.ui'
 #
-# Created: Sun Oct 30 17:48:52 2016
+# Created: Sun Oct 30 18:33:06 2016
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -44,6 +44,7 @@ class Ui_DialogLogin(object):
         self.formLayout = QtGui.QFormLayout()
         self.formLayout.setFieldGrowthPolicy(QtGui.QFormLayout.AllNonFixedFieldsGrow)
         self.formLayout.setFormAlignment(QtCore.Qt.AlignBottom|QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft)
+        self.formLayout.setVerticalSpacing(6)
         self.formLayout.setObjectName(_fromUtf8("formLayout"))
         self.labelUsername = QtGui.QLabel(DialogLogin)
         self.labelUsername.setObjectName(_fromUtf8("labelUsername"))
@@ -59,6 +60,17 @@ class Ui_DialogLogin(object):
         self.uiPasswordLine.setObjectName(_fromUtf8("uiPasswordLine"))
         self.formLayout.setWidget(2, QtGui.QFormLayout.FieldRole, self.uiPasswordLine)
         self.selectServer = QtGui.QComboBox(DialogLogin)
+        self.selectServer.setEnabled(True)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.selectServer.sizePolicy().hasHeightForWidth())
+        self.selectServer.setSizePolicy(sizePolicy)
+        self.selectServer.setMaximumSize(QtCore.QSize(16777215, 33))
+        self.selectServer.setMaxCount(20)
+        self.selectServer.setSizeAdjustPolicy(QtGui.QComboBox.AdjustToContents)
+        self.selectServer.setMinimumContentsLength(0)
+        self.selectServer.setFrame(True)
         self.selectServer.setObjectName(_fromUtf8("selectServer"))
         self.selectServer.addItem(_fromUtf8(""))
         self.selectServer.addItem(_fromUtf8(""))
@@ -130,7 +142,7 @@ class Ui_DialogLogin(object):
         self.labelUsername.setText(_translate("DialogLogin", "Username", None))
         self.labelPassword.setText(_translate("DialogLogin", "Password", None))
         self.selectServer.setItemText(0, _translate("DialogLogin", "127.0.0.1", None))
-        self.selectServer.setItemText(1, _translate("DialogLogin", "fightcade.com", None))
+        self.selectServer.setItemText(1, _translate("DialogLogin", "ggpo-ng.com", None))
         self.labelServer.setText(_translate("DialogLogin", "Server", None))
         self.uiSavePasswordChk.setText(_translate("DialogLogin", "Save Password", None))
         self.uiRegisterLink.setText(_translate("DialogLogin", "Create Account...", None))
