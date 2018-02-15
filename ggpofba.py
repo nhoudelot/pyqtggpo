@@ -431,8 +431,8 @@ def main():
 
 if __name__ == "__main__":
 
-	log = os.path.join(os.path.abspath(os.path.dirname(sys.argv[0])), "ggpofba.log")
-	errorlog = os.path.join(os.path.abspath(os.path.dirname(sys.argv[0])), "ggpofba-errors.log")
+	log = os.path.join(os.path.abspath(os.path.dirname(sys.argv[0])), "/tmp/ggpofba.log")
+	errorlog = os.path.join(os.path.abspath(os.path.dirname(sys.argv[0])), "/tmp/ggpofba-errors.log")
 
 	try:
 		#loglevel=logging.DEBUG
