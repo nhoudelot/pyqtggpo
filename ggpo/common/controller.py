@@ -180,7 +180,7 @@ class Controller(QtCore.QObject):
             if self.channelport==None:
                 self.channelport = 7000
                 Settings.setValue(Settings.PORT, int(self.channelport))
-            self.tcpSock.connect(('ggpo-ng.com', int(self.channelport),))
+            self.tcpSock.connect((Settings.value('Server'), int(self.channelport),))
             self.tcpConnected = True
         except Exception:
             self.sigStatusMessage.emit("Cannot connect to FightCade server")

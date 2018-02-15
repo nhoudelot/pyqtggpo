@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>430</width>
-    <height>286</height>
+    <width>569</width>
+    <height>317</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -51,6 +51,9 @@
        <property name="formAlignment">
         <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
        </property>
+       <property name="verticalSpacing">
+        <number>6</number>
+       </property>
        <item row="0" column="0">
         <widget class="QLabel" name="labelUsername">
          <property name="text">
@@ -78,6 +81,54 @@
         <widget class="QLineEdit" name="uiPasswordLine">
          <property name="echoMode">
           <enum>QLineEdit::Password</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QComboBox" name="selectServer">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>33</height>
+          </size>
+         </property>
+         <property name="maxCount">
+          <number>20</number>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QComboBox::AdjustToContents</enum>
+         </property>
+         <property name="minimumContentsLength">
+          <number>0</number>
+         </property>
+         <property name="frame">
+          <bool>true</bool>
+         </property>
+         <item>
+          <property name="text">
+           <string>127.0.0.1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ggpo-ng.com</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="labelServer">
+         <property name="text">
+          <string>Server</string>
          </property>
         </widget>
        </item>
@@ -182,7 +233,6 @@
  <tabstops>
   <tabstop>uiUsernameLine</tabstop>
   <tabstop>uiPasswordLine</tabstop>
-  <tabstop>uiSavePasswordChk</tabstop>
   <tabstop>uiLoginBtn</tabstop>
   <tabstop>uiRegisterLink</tabstop>
  </tabstops>

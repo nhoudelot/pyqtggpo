@@ -52,16 +52,20 @@ class LoginDialog(QtGui.QDialog, Ui_DialogLogin):
             return
         username = self.uiUsernameLine.text().strip()
         password = self.uiPasswordLine.text()
+        server = self.selectServer.currentText().strip()
         self.uiErrorLbl.clear()
         errmsg = ''
         if not username:
             errmsg += "Username required\n"
         if not password:
             errmsg += "Password required\n"
+        if not server:
+            errmsg += "Server required\n"
         if errmsg:
             self.uiErrorLbl.setText(errmsg)
             return
 
+        Settings.setValue('Server', server)
         if self.uiSavePasswordChk.isChecked():
             Settings.setValue(Settings.USERNAME, username)
             Settings.setValue(Settings.PASSWORD, base64.encodestring(password))
