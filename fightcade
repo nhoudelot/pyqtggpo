@@ -10,6 +10,6 @@ if [ $? -eq 0 ]; then
 	sed -i '' -e 's/nVidSelect.*/nVidSelect 3/' ~/ggpofba-ng.bkp.ini 2>/dev/null
 fi
 
-. ggpo/scripts/shell-functions.sh
+. /usr/share/games/fightcade/ggpo/scripts/shell-functions.sh
 find_python
-${PYTHON} ./main.py 2>/dev/null &
+${PYTHON} /usr/share/games/fightcade/main.py 2>/dev/null &

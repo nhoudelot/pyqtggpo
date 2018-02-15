@@ -11,7 +11,7 @@
 # keep OSX happy:
 cd "${0%/*}"
 
-. ggpo/scripts/shell-functions.sh
+. /usr/share/games/fightcade/ggpo/scripts/shell-functions.sh
 find_python
 
 PARAM=${1+"$@"}
@@ -19,7 +19,7 @@ PARAM=${1+"$@"}
 THIS_SCRIPT_PATH=`readlink -f $0 2>/dev/null || pwd`
 THIS_SCRIPT_DIR=`dirname ${THIS_SCRIPT_PATH}`
 
-FBA="./ggpofba.py"
+FBA="/usr/share/games/fightcade/ggpofba.py"
 if [ ! -x ${FBA} ] ; then
 	FBA="${THIS_SCRIPT_DIR}/ggpofba.py"
 fi
